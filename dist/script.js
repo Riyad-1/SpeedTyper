@@ -19,7 +19,7 @@ words = [
   "dog",
   "parrot",
   "apple",
-  "strawberry"
+  "strawberry",
 ];
 
 // Init word
@@ -86,12 +86,12 @@ function gameOver() {
   endGameEl.style.display = "flex";
 }
 
-// addWordToDOM();
+addWordToDOM();
 
 // Event Listeners
 
 // Typing
-text.addEventListener("input", e => {
+text.addEventListener("input", (e) => {
   const insertedText = e.target.value;
 
   if (insertedText === randomWord) {
@@ -131,7 +131,7 @@ settingsBtn.addEventListener("click", () => {
 });
 
 // Settings select
-settingsForm.addEventListener("change", e => {
+settingsForm.addEventListener("change", (e) => {
   difficulty = e.target.value;
   localStorage.setItem("difficulty", difficulty);
 });
